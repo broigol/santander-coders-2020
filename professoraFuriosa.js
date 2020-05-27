@@ -53,4 +53,21 @@ function aberturas (alunosDaSegunda, alunosDaTerca, alunosDaQuarta, minimo) {
 }; 
 aberturas([-2,0,0,15], [-2,2,10,15], [-2,1,0,15], 2);
 
+/*
+Necessitamos uma função produto que receba um array de números e retorne o produto:
+o resultado de multiplicar todos os elementos entre si.
+Ex.: produto([1, 4, 7]) deve retornar 28, que é 1 * 4 * 7
+*/
 
+function produto (fatores){
+    var total = 0;
+    for (let i = 0; i < fatores.length; i++) {
+        if (i == 0) {
+            total = fatores[i];
+        } else {
+            total = total * fatores[i];
+        }
+    }   
+    return total; 
+}
+fatores([1, 6, 4])

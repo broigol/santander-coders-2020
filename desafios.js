@@ -156,4 +156,31 @@ function escada (degraus) {
 
 /*
 
+Escreva a função alturaArvoreUtopica, que utilize uma quantidade de ciclos de crescimento,
+e retorne a altura resultante da árvore.
+
+Árvores utópicas  crescem de uma forma particular, em dois ciclos:
+
+- cada primavera dobram seu tamanho
+- cada verão crescem um metro
+Ex.:
+si N = 0, sua altura será 1 metro (não cresceu nada)
+si N = 1, sua altura será de 2 metros (dobrou a altura na primavera)
+si N = 2, sua altura será de 3 metros (cresceu um metro mais no verão)
+si N = 3, sua altura será de 6 metros (dobrou a altura na primavera seguinte)
+
 */
+
+function alturaArvoreUtopica (ciclos) {
+    var altura = 0;
+    for (let i = 0; i <= ciclos; i++) {
+        if (ciclos==0) {
+            altura = 1;
+        } else if ((i % 2) == 0) {
+                altura +=1 ; 
+        } else {
+                altura *= 2 ; 
+        }
+    }
+    return altura
+} alturaArvoreUtopica(1)

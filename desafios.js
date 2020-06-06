@@ -120,3 +120,40 @@ function maisMenos (element) {
     return result
 };
 maisMenos([1,0,0,-1]);
+
+/*
+Representar uma escada com altura variável, utilizando um array de strings.
+Ex.:
+var escada3 = [
+    "  #",
+    " ##",
+    "###"
+]
+
+Montei duas funções de resposta diferentes.
+*/
+
+function escada (degraus) {
+    var e = [];
+    for (let i = 0; i < degraus; i++) {
+        if ( i == 0 ) {
+            e.push("#");
+        } else {
+            e.push(e[i-1]+"#")
+        }
+    }
+    return e;
+} escada(3);
+
+
+function escada (degraus) {
+    var e = [];
+    for (let i = 0; i < degraus; i++) {
+    var d = "#".repeat(i+1); e.push(d);       
+    }
+    return e;
+} escada(5);
+
+/*
+
+*/

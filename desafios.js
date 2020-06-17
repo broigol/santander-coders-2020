@@ -130,29 +130,17 @@ var escada3 = [
     "###"
 ]
 
-Montei duas funções de resposta diferentes.
 */
 
 function escada (degraus) {
-    var e = [];
+    var escFinal = [];
     for (let i = 0; i < degraus; i++) {
-        if ( i == 0 ) {
-            e.push("#");
-        } else {
-            e.push(e[i-1]+"#")
-        }
+        let e = " ".repeat( (degraus - 1) - i);
+        let d = "#".repeat(i + 1); 
+        escFinal.push(e+d);       
     }
-    return e;
-} escada(3);
-
-
-function escada (degraus) {
-    var e = [];
-    for (let i = 0; i < degraus; i++) {
-    var d = "#".repeat(i+1); e.push(d);       
-    }
-    return e;
-} escada(5);
+    return escFinal;
+}; escada(5);
 
 /*
 
